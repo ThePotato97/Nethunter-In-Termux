@@ -34,7 +34,7 @@ checkintegrity() {
 	echo " [*] Script will be terminate immediately in case of integrity failure"
 	if [ $SETARCH = "aarch64" ]
 		then
-	sha512sum -c kalifs-arm64-minimal.sha512sum && echo || integritycheck=FAIL
+	sha512sum -c kalifs-arm64-full.sha512sum && echo || integritycheck=FAIL
 	if [ $integritycheck = "FAIL" ] 
 		then
 			printf "$red $printrerunerror $reset"
@@ -44,7 +44,7 @@ checkintegrity() {
 		fi
 			elif [ $SETARCH = "armhf" ]
 				then
-		sha512sum -c kalifs-armhf-minimal.sha512sum && echo "" || integritycheck=FAIL
+		sha512sum -c kalifs-armhf-full.sha512sum && echo "" || integritycheck=FAIL
 		if [ $integritycheck = "FAIL" ]
 			then
 				printf"$red $printrerunerror $reset"
