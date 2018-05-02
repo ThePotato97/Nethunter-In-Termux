@@ -136,13 +136,13 @@ extract() {
 	printf "$blue [*] Extracting ... $reset"
 	echo
 	if [ $SETARCH = aarch64 ]; then
-		OUTPUT=kalifs-arm64-minimal.tar.xz
+		OUTPUT=kalifs-arm64-full.tar.xz
 		cd $HOME && proot --link2symlink -0 bsdtar -xpf $OUTPUT 2> /dev/null || : 
 		mv kali-arm64 kali
 
 
 	else
-		OUTPUT=kalifs-armhf-minimal.tar.xz
+		OUTPUT=kalifs-armhf-full.tar.xz
                cd $HOME && proot --link2symlink -0 bsdtar -xpf $OUTPUT 2> /dev/null || :
 	       mv kali-armhf kali
 		fi
@@ -213,10 +213,10 @@ getsha() {
 	echo
 	if [ $SETARCH = "aarch64" ]
 		then
-      axel https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-arm64-minimal.sha512sum
+      axel https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-arm64-full.sha512sum
 	elif [ $SETARCH = "armhf" ]
 		then
-	 axel https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-armhf-minimal.sha512sum
+	 axel https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-armhf-full.sha512sum
 	else 
 		printf "$red Your phone is supported but cant download SHA file plz contact to lokesh@hax4us.com $reset"
 		exit
