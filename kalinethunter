@@ -13,8 +13,8 @@ reset='\033[0m'
 
 #  url's of all possibls architectures
 
-urlaarch64="https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-arm64-minimal.tar.xz"
-urlarm="https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-armhf-minimal.tar.xz"
+urlaarch64="https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-arm64-full.tar.xz"
+urlarm="https://build.nethunter.com/kalifs/kalifs-20171013/kalifs-armhf-full.tar.xz"
 
 printrerunerror="Sorry :( to say your downloaded linux file was corrupted or half downloaded but dont worry just rerun my script"
 
